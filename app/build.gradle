@@ -28,7 +28,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
     compile 'org.greenrobot:eventbus:3.0.0'
+    apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
     compile 'com.jakewharton:butterknife:8.1.0'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
+}
+
+apt {
+    arguments {
+        eventBusIndex "pom.tryeventbus.MyEventBusIndex"
+    }
 }
