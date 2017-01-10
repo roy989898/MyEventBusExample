@@ -1,6 +1,5 @@
 package pom.tryeventbus;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -14,8 +13,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import pom.tryeventbus.Api.ApiMethod;
 import pom.tryeventbus.EventBusMessage.LatestForeignExchangeMessage;
-import pom.tryeventbus.Services.ApiIntentService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btGet)
     public void onClick() {
-        Intent intent = new Intent(this, ApiIntentService.class);
-        startService(intent);
+        ApiMethod.getLatestForeignExchange(this);
     }
 }

@@ -20,7 +20,7 @@
         </activity>
 
         <service
-            android:name=".Services.ApiIntentService"
+            android:name=".Services.GetLatestForeignExchangeService"
             android:exported="false"></service>
     </application>
 

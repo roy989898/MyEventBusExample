@@ -11,10 +11,10 @@ import pom.tryeventbus.Api.ApiManager;
 import pom.tryeventbus.EventBusMessage.LatestForeignExchangeMessage;
 
 
-public class ApiIntentService extends IntentService {
+public class GetLatestForeignExchangeService extends IntentService {
 
-    public ApiIntentService() {
-        super("ApiIntentService");
+    public GetLatestForeignExchangeService() {
+        super("GetLatestForeignExchangeService");
     }
 
     @Override
